@@ -10,6 +10,7 @@ cap.set(4,480)
 while True:
 
     success, img = cap.read()
+    # img= cv2.imread("sbi.jpg")
     for barcode in decode(img):
         myData = barcode.data.decode('utf-8')
         print(myData)
